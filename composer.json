@@ -1,0 +1,36 @@
+{
+  "name": "heimrichhannot/contao-entity_notifyer",
+  "description":"A backend module for sending notifications if an entity hasn't been changed in a while.",
+  "keywords":["contao", "notification", "backend", "module", "developer"],
+  "type": "contao-module",
+  "homepage":"https://github.com/heimrichhannot/contao-entity_notifyer",
+  "license":"LGPL-3.0+",
+  "authors":[
+    {
+      "name":"Heimrich & Hannot",
+      "email":"digitales@heimrich-hannot.de",
+      "homepage":"http://www.heimrich-hannot.de",
+      "role":"Developer"
+    }
+  ],
+  "support":{
+    "issues":"https://github.com/heimrichhannot/contao-entity_notifyer/issues"
+  },
+  "require": {
+    "php": "~5.4 || ~7.0",
+    "contao/core-bundle": "^3.5.1 || ~4.1",
+    "contao-community-alliance/composer-plugin": "~2.4 || ~3.0",
+    "heimrichhannot/contao-observer": ">=1.2.0",
+    "terminal42/notification_center": ">=1.3.10"
+  },
+  "autoload": {
+    "classmap": [""]
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/entity_notifyer"
+      }
+    }
+  }
+}
