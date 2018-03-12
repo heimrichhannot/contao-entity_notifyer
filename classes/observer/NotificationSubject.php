@@ -66,9 +66,9 @@ class NotificationSubject extends Subject
         while ($entities->next())
         {
             $this->context = $entities->current();
-            
+    
             // TODO: add editable WHERE clause to entity observer
-            if($this->context->{Entity::ENTITY_NOTIFYER_EXCLUDE_FROM_OBSERVER})
+            if($this->context->{Entity::ENTITY_NOTIFYER_EXCLUDE_FROM_OBSERVER} || 0 == $this->context->tstamp || (isset($this->context->disable) && $this->context->disable) || (isset($this->context->published) && !$this->context->published))
             {
                 continue;
             }
